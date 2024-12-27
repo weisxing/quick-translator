@@ -96,4 +96,4 @@
 
 ## 许可证
 
-[MIT License](LICENSE) © 2023 [魏双兴](https://github.com/weisxing) 
+[MIT License](LICENSE) © 2024 [weisxing](https://github.com/weisxing) 
