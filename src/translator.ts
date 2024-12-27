@@ -1,6 +1,31 @@
 import * as vscode from 'vscode';
 import { TencentApi, TencentCredentials } from './tencent-api';
 
+export const SUPPORTED_LANGUAGES = {
+    auto: '自动检测',
+    zh: '中文',
+    en: '英语',
+    ja: '日语',
+    ko: '韩语',
+    fr: '法语',
+    de: '德语',
+    es: '西班牙语',
+    ru: '俄语'
+} as const;
+
+// 腾讯云翻译支持的语言代码映射
+export const TENCENT_LANGUAGE_MAP = {
+    auto: 'auto',
+    zh: 'zh',
+    en: 'en',
+    ja: 'ja',
+    ko: 'ko',
+    fr: 'fr',
+    de: 'de',
+    es: 'es',
+    ru: 'ru'
+} as const;
+
 export class TencentTranslator {
     private api: TencentApi | null = null;
     private cache = new Map<string, string>();
@@ -22,7 +47,7 @@ export class TencentTranslator {
         }
 
         // 验证语言代码
-        const validLangs = ['zh', 'en', 'ja', 'ko', 'fr', 'de', 'es'];
+        const validLangs = ['zh', 'en', 'ja', 'ko', 'fr', 'de', 'es', 'ru'];
         if (!validLangs.includes(configLang)) {
             console.warn(`不支持的源语言: ${configLang}, 使用自动检测`);
             return this.detectLanguage(text);
@@ -36,7 +61,7 @@ export class TencentTranslator {
         const configLang = config.get<string>('targetLanguage') || 'en';
 
         // 验证语言代码
-        const validLangs = ['zh', 'en', 'ja', 'ko', 'fr', 'de', 'es'];
+        const validLangs = ['zh', 'en', 'ja', 'ko', 'fr', 'de', 'es', 'ru'];
         if (!validLangs.includes(configLang)) {
             console.warn(`不支持的目标语言: ${configLang}, 使用默认值: en`);
             return 'en';

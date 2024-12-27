@@ -57,17 +57,19 @@
                         "ko",
                         "fr",
                         "de",
-                        "es"
+                        "es",
+                        "ru"
                     ],
                     "enumDescriptions": [
-                        "自动检测 (Auto Detect)",
-                        "简体中文 (Simplified Chinese)",
-                        "英语 (English)",
-                        "日语 (Japanese)",
-                        "韩语 (Korean)",
-                        "法语 (French)",
-                        "德语 (German)",
-                        "西班牙语 (Spanish)"
+                        "自动检测",
+                        "中文",
+                        "英语",
+                        "日语",
+                        "韩语",
+                        "法语",
+                        "德语",
+                        "西班牙语",
+                        "俄语"
                     ],
                     "description": "源语言设置。选择 auto 时将自动检测语言"
                 },
@@ -81,16 +83,18 @@
                         "ko",
                         "fr",
                         "de",
-                        "es"
+                        "es",
+                        "ru"
                     ],
                     "enumDescriptions": [
-                        "简体中文 (Simplified Chinese)",
-                        "英语 (English)",
-                        "日语 (Japanese)",
-                        "韩语 (Korean)",
-                        "法语 (French)",
-                        "德语 (German)",
-                        "西班牙语 (Spanish)"
+                        "中文",
+                        "英语",
+                        "日语",
+                        "韩语",
+                        "法语",
+                        "德语",
+                        "西班牙语",
+                        "俄语"
                     ],
                     "description": "目标翻译语言。如果与源语言相同，则自动切换为英文（源语言为英文则切换为中文）"
                 },
