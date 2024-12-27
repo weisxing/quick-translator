@@ -1,0 +1,158 @@
+{
+    "name": "quick-translator",
+    "displayName": "Quick Translator",
+    "description": "快速翻译，支持多语言互译，选中文本即可悬浮翻译",
+    "version": "0.0.1",
+    "date": "2023-12-27",
+    "private": false,
+    "author": {
+        "name": "魏双兴"
+    },
+    "engines": {
+        "node": ">=14.0.0",
+        "npm": ">=6.0.0",
+        "vscode": "^1.60.0"
+    },
+    "categories": [
+        "Other",
+        "Programming Languages",
+        "Formatters"
+    ],
+    "activationEvents": [
+        "onStartupFinished"
+    ],
+    "main": "./out/extension.js",
+    "contributes": {
+        "commands": [
+            {
+                "command": "quick-translator.translate",
+                "title": "Translate Selected Text"
+            },
+            {
+                "command": "quick-translator.copyTranslation",
+                "title": "Copy Translation Result"
+            }
+        ],
+        "configuration": {
+            "title": "Translator",
+            "properties": {
+                "translator.tencentSecretId": {
+                    "type": "string",
+                    "default": "",
+                    "description": "腾讯云 API SecretId"
+                },
+                "translator.tencentSecretKey": {
+                    "type": "string",
+                    "default": "",
+                    "description": "腾讯云 API SecretKey"
+                },
+                "translator.sourceLanguage": {
+                    "type": "string",
+                    "default": "auto",
+                    "enum": [
+                        "auto",
+                        "zh",
+                        "en",
+                        "ja",
+                        "ko",
+                        "fr",
+                        "de",
+                        "es"
+                    ],
+                    "enumDescriptions": [
+                        "自动检测 (Auto Detect)",
+                        "简体中文 (Simplified Chinese)",
+                        "英语 (English)",
+                        "日语 (Japanese)",
+                        "韩语 (Korean)",
+                        "法语 (French)",
+                        "德语 (German)",
+                        "西班牙语 (Spanish)"
+                    ],
+                    "description": "源语言设置。选择 auto 时将自动检测语言"
+                },
+                "translator.targetLanguage": {
+                    "type": "string",
+                    "default": "en",
+                    "enum": [
+                        "zh",
+                        "en",
+                        "ja",
+                        "ko",
+                        "fr",
+                        "de",
+                        "es"
+                    ],
+                    "enumDescriptions": [
+                        "简体中文 (Simplified Chinese)",
+                        "英语 (English)",
+                        "日语 (Japanese)",
+                        "韩语 (Korean)",
+                        "法语 (French)",
+                        "德语 (German)",
+                        "西班牙语 (Spanish)"
+                    ],
+                    "description": "目标翻译语言。如果与源语言相同，则自动切换为英文（源语言为英文则切换为中文）"
+                },
+                "translator.hoverDelay": {
+                    "type": "number",
+                    "default": 300,
+                    "description": "鼠标悬停延迟时间(毫秒)"
+                },
+                "translator.maxTextLength": {
+                    "type": "number",
+                    "default": 5000,
+                    "description": "最大可翻译文本长度"
+                },
+                "translator.projectId": {
+                    "type": "number",
+                    "default": 0,
+                    "description": "腾讯云项目 ID，如无特殊需求可保持默认值"
+                }
+            }
+        }
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./"
+    },
+    "devDependencies": {
+        "@types/node": "^14.x.x",
+        "@types/vscode": "^1.60.0",
+        "typescript": "^4.9.5"
+    },
+    "dependencies": {
+        "tencentcloud-sdk-nodejs-tmt": "4.0.987"
+    },
+    "publisher": "weisxing",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/weisxing/quick-translator"
+    },
+    "keywords": [
+        "translator",
+        "translation",
+        "多语言",
+        "翻译",
+        "tencent",
+        "hover"
+    ],
+    "icon": "images/icon.png",
+    "galleryBanner": {
+        "color": "#2196F3",
+        "theme": "light"
+    },
+    "license": "MIT",
+    "packageManager": "npm@6.14.0",
+    "volta": {
+        "node": "14.21.3",
+        "npm": "6.14.0"
+    },
+    "pricing": "Free",
+    "qna": "https://github.com/weisxing/quick-translator/issues",
+    "bugs": {
+        "url": "https://github.com/weisxing/quick-translator/issues"
+    },
+    "homepage": "https://github.com/weisxing/quick-translator/blob/main/README.md"
+}
