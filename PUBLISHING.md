@@ -12,7 +12,7 @@
    ```
 
 2. **准备账号**
-   [参考文档](https://juejin.cn/post/7299356168882339855)
+   [参考文档](https://code.visualstudio.com/api/working-with-extensions/publishing-extension)
    - [获取个人访问令牌 ](https://dev.azure.com)
    - [创建发布者](https://marketplace.visualstudio.com/manage/publishers)，会验证Google图形验证码，需要翻墙
 
@@ -20,3 +20,4 @@
    - 访问 [Marketplace](https://marketplace.visualstudio.com/manage)
    - 登录 Microsoft 账号
    - 手动上传 .vsix 文件
+   - 会验证Google图形验证码，需要翻墙

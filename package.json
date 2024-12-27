@@ -2,7 +2,7 @@
     "name": "quick-translator",
     "displayName": "Quick Translator",
     "description": "快速翻译，支持多语言互译，选中文本即可悬浮翻译",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "date": "2024-12-27",
     "private": false,
     "author": {

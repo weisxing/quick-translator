@@ -2,6 +2,11 @@
 
 All notable changes to the "Quick Translator" extension will be documented in this file.
 
+## [0.0.2] - 2024-12-27
+
+### Added
+- ✨ 更改版本号
+
 ## [0.0.1] - 2024-12-27
 
 ### Added
